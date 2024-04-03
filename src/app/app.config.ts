@@ -17,6 +17,8 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideHttpClient(),
-    importProvidersFrom(PetStoreApiModule.forRoot(apiConfigFactory)),
+    importProvidersFrom(
+      PetStoreApiModule.forRoot(apiConfigFactory)
+    ),
   ],
 };

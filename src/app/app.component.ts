@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PetService } from "api";
+import { Pet, PetService } from "api";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent {
   private client = inject(PetService);
 
   constructor() {
-    this.client.getPetById({ petId: 1 }).subscribe(pet => {
+    this.client.getPetById({ petId: 1 }).subscribe((pet: Pet) => {
       console.log(pet);
     });
   }
