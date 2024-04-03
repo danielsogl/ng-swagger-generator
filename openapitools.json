@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "7.4.0",
+    "generators": {
+      "pet-store-api": {
+        "generatorName": "typescript-angular",
+        "glob": "swagger.json",
+        "output": "projects/api/src/lib",
+        "additionalProperties": {
+          "apiModulePrefix": "PetStore",
+          "withInterfaces": "true",
+          "fileNaming": "kebab-case",
+          "useSingleRequestParameter": "true",
+          "supportsES6": "true",
+          "stringEnums": "true"
+        }
+      }
+    }
+  }
+}
